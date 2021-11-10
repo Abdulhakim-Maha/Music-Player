@@ -2,24 +2,44 @@ import React, { useState } from "react";
 import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
+import UndoIcon from "@mui/icons-material/Undo";
 const Category = () => {
   const [selected, setSelected] = useState(false);
   const clickHandler = () => {
-    setSelected((prev) => !prev)
+    setSelected((prev) => !prev);
   };
+  const undoHandler = () =>{
+    setSelected((prev) => !prev);
+  }
   const Inter = () => {
     return (
       <div className={classes.category}>
         <div className={classes.container}>
-          <h2 className={classes.head}>Select Category</h2>
-          <ul className={classes.inner_container}>
-            <Music/>
-            <Music/>
-            <Music/>
-            <Music/>
-            <Music/>
-            <Music/>
-            <Music/>
+          <div className={classes.wrapper}>
+            <h2 className={classes.head}>Select Music</h2>
+            <UndoIcon
+              className={classes.undoicon}
+              sx={{ fontSize: 50 }}
+              onClick={undoHandler}
+            />
+          </div>
+          <ul className={classes.inner_container_music}>
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
+            <Music />
           </ul>
         </div>
       </div>

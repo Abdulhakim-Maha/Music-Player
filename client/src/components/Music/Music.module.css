@@ -1,9 +1,12 @@
 .container{
-	width: 200px;
+	width: 170px;
 	height: 200px;
 	display: flex;
+	margin: 7px;
 	flex-direction: column;
 	justify-content: center;
+	background-color: gray;
+	border-radius: 10px;
 	align-items: center;
 }
 .container img{

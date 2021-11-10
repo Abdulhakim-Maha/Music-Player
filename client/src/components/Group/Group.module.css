@@ -15,7 +15,7 @@
 	color: black;
 }
 .container:hover{
-	
+	/* background-image:url('http://localhost:3000/images/bg1.jpg');	 */
 }
 .container img{
 	border-radius: 50%;

@@ -7,6 +7,22 @@
   align-items: center;
   justify-content: center;
 }
+.wrapper{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.undoicon{
+  color:white;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+.undoicon:hover{
+  color: #2FD6FE;
+}
 .container {
   width: 50%;
   height: 70%;
@@ -35,4 +51,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+.inner_container_music {
+  width: 97%;
+  height: 89%;
+  border-radius: 10px;
+  background-color: white;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: #a23cff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2FD6FE;
 }
