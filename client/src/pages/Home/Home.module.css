@@ -1,0 +1,66 @@
+.home {
+  background-image: url("https://i.ytimg.com/vi/Jox6R5-rIH0/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: antiquewhite; */
+}
+.title {
+  /* background-color: burlywood; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Azeret Mono", monospace;
+  width: 50%;
+  height: 100%;
+}
+.title h1 {
+  font-size: 6rem;
+  text-shadow: 2px 2px 7px gray;
+  font-weight: 900;
+  margin-bottom: 7px;
+  color: #fff;
+}
+.title h4 {
+  font-size: 2rem;
+  margin-left: .5rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  margin-bottom: 1px;
+  color: ivory;
+}
+.image {
+  /* background-color: aqua; */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  margin-left: .5rem;
+  margin-top: .5rem;
+  text-decoration: none;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: indianred;
+}
+.icon{
+  background-color: white;
+  border: 3px solid #A23CFF;
+  border-radius: 50%;
+  color: #A23CFF;
+}
+.icon:hover{
+  background-color: black;
+  border: 3px solid #2FD6FE;
+  color:#2FD6FE;
+}
