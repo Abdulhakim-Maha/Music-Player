@@ -7,6 +7,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 .group{
 	font-family: 'Playfair Display', serif;
@@ -14,7 +15,7 @@
 	color: black;
 }
 .container:hover{
-	background-color: gray;
+	
 }
 .container img{
 	border-radius: 50%;

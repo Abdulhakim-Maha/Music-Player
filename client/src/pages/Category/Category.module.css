@@ -1,4 +1,4 @@
-.category{
+.category {
   background-image: url("https://i.ytimg.com/vi/Jox6R5-rIH0/maxresdefault.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,22 +14,25 @@
   flex-direction: column;
   /* justify-conent: ; */
   align-items: center;
-  color:black;
+  color: black;
   border-radius: 10px;
-  background-color:#A23CFF ;
+  background-color: #a23cff;
+  box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
 }
-.head{
-	font-family: 'Mochiy Pop One', sans-serif;
-	margin: 7px;
-	color: white;
+.head {
+  font-family: "Mochiy Pop One", sans-serif;
+  margin: 7px;
+  color: white;
 }
-.inner_container{
-	width: 97%;
-	height: 89%;
-	border-radius: 10px;
-	background-color: white;
-	overflow: hidden;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+.inner_container {
+  width: 97%;
+  height: 89%;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
