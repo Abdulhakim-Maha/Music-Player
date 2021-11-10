@@ -1,0 +1,23 @@
+.container{
+	border-radius: 10px;
+	width: 50%;
+	height:50%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.group{
+	font-family: 'Playfair Display', serif;
+	margin-top: 1.5rem;
+	color: black;
+}
+.container:hover{
+	background-color: gray;
+}
+.container img{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}

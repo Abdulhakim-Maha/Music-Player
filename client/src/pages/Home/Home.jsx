@@ -10,12 +10,12 @@ const Home = () => {
           <h1>Spotify</h1>
           <h4>Make your life</h4>
           <h4>More happier</h4>
-          <Link to="/music" className={classes.link}>
+          <Link to="/category" className={classes.link}>
             Let's go
           </Link>
         </div>
         <div className={classes.image}>
-          <Link to="/music">
+          <Link to="/category">
             <MusicNoteOutlinedIcon
               sx={{ fontSize: 300 }}
               className={classes.icon}

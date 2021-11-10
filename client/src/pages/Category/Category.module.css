@@ -1,0 +1,35 @@
+.category{
+  background-image: url("https://i.ytimg.com/vi/Jox6R5-rIH0/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  /* justify-conent: ; */
+  align-items: center;
+  color:black;
+  border-radius: 10px;
+  background-color:#A23CFF ;
+}
+.head{
+	font-family: 'Mochiy Pop One', sans-serif;
+	margin: 7px;
+	color: white;
+}
+.inner_container{
+	width: 97%;
+	height: 89%;
+	border-radius: 10px;
+	background-color: white;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}

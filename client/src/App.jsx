@@ -1,5 +1,5 @@
 import Home from './pages/Home/Home';
-import Music from './pages/Music'
+import Music from './pages/Category/Category'
 import {Route,Switch} from 'react-router-dom'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <Route path='/' exact>
         <Home/>
       </Route>
-      <Route path='/music'>
+      <Route path='/category'>
         <Music/>
       </Route>
     </Switch>
