@@ -8,6 +8,7 @@ import { INTER, KPOP, THAI, CHILL} from "../../DummyData";
 const Category = () => {
   const [selected, setSelected] = useState(false);
   const [group, setGroup] = useState([]);
+  console.log(group)
   const clickHandler = (type) => {
     if(type === 'Inter'){
       setGroup(INTER)
