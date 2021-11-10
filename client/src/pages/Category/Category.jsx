@@ -3,9 +3,24 @@ import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
 import UndoIcon from "@mui/icons-material/Undo";
+import { INTER, KPOP, THAI, CHILL} from "../../DummyData";
+
 const Category = () => {
   const [selected, setSelected] = useState(false);
-  const clickHandler = () => {
+  const [group, setGroup] = useState([]);
+  const clickHandler = (type) => {
+    if(type === 'Inter'){
+      setGroup(INTER)
+    }
+    else if(type === 'K-POP'){
+      setGroup(KPOP)
+    }
+    else if(type === 'Thai'){
+      setGroup(THAI)
+    }
+    else if(type === 'Chill'){
+      setGroup(CHILL)
+    }
     setSelected((prev) => !prev);
   };
   const undoHandler = () =>{
@@ -24,22 +39,9 @@ const Category = () => {
             />
           </div>
           <ul className={classes.inner_container_music}>
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
-            <Music />
+            {group.map(music => {
+              return <Music music={music} />
+            })}
           </ul>
         </div>
       </div>
@@ -56,6 +58,7 @@ const Category = () => {
               src={
                 "https://i2.wp.com/blackpinkupdate.com/wp-content/uploads/2020/06/BLACKPINK-Official-Logo-HD.jpg?fit=1000%2C1000&ssl=1"
               }
+              click={clickHandler}
             />
             <Group
               group="Inter"
@@ -69,12 +72,14 @@ const Category = () => {
               src={
                 "https://pbs.twimg.com/profile_images/887943434677305345/8qm3RVnk.jpg"
               }
+              click={clickHandler}
             />
             <Group
               group="Chill"
               src={
                 "https://i.pinimg.com/originals/2b/47/97/2b47975eee04e9cccaea2401e646ba5a.jpg"
               }
+              click={clickHandler}
             />
           </ul>
         </div>

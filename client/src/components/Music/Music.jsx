@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './Music.module.css'
-const Music = () => {
+const Music = ({music}) => {
 	return (
 		<div className={classes.container}>
-			<img src="/images/what_do_you_mean.png" alt="" />	
-			<h3>What do you mean</h3>
-			<h4>Justin Bieber</h4>
+			<img src={music.img_src} alt="" />	
+			<h3>{music.title}</h3>
+			<h4>{music.artist}</h4>
 		</div>
 	)
 }
