@@ -1,0 +1,22 @@
+.container {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  background-color: #a23cff;
+  z-index: 100;
+  box-shadow: -2px 10px 26px -6px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: -2px 10px 26px -6px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: -2px 10px 26px -6px rgba(0, 0, 0, 0.74);
+}
+.title {
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-family: "Azeret Mono", monospace;
+}
+.title img {
+  width: 15px;
+  height: 15px;
+}
