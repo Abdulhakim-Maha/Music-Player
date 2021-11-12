@@ -1,0 +1,31 @@
+.container {
+  width: 95%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(184, 182, 182);
+  border-radius: 3px;
+  margin: 7px auto;
+  background: rgb(167, 112, 239);
+  background: linear-gradient(
+    90deg,
+    rgba(167, 112, 239, 1) 0%,
+    rgba(207, 139, 243, 1) 51%,
+    rgba(155, 225, 253, 1) 100%
+  );
+  box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 3px 3px 8px -1px rgba(0, 0, 0, 0.56);
+}
+.container img{
+	margin-left: .5rem;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 1px solid white;
+}
+.wrapper {
+  margin-left: 1rem;
+  color: rgb(241, 236, 236);
+}

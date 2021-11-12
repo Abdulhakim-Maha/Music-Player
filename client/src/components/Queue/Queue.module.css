@@ -26,9 +26,6 @@
   width: 95%;
   background-color: aliceblue;
   border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   overflow-y: scroll;
 }
 .btn_wrapper {

@@ -17,7 +17,7 @@ const Category = () => {
       setGroup(KPOP);
     } else if (type === "Thai") {
       setGroup(THAI);
-    } else if (type === "Chill") {
+    } else if (type === "J-POP") {
       setGroup(CHILL);
     }
     setSelected((prev) => !prev);
@@ -71,9 +71,9 @@ const Category = () => {
               click={clickHandler}
             />
             <Group
-              group="Chill"
+              group="J-POP"
               src={
-                "https://i.pinimg.com/originals/2b/47/97/2b47975eee04e9cccaea2401e646ba5a.jpg"
+                "https://pm1.narvii.com/6044/42161dd69e7af1871daac0d43fc2429c70fb12c6_hq.jpg"
               }
               click={clickHandler}
             />
