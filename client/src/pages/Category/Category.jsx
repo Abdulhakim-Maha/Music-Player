@@ -9,7 +9,6 @@ import Queue from "../../components/Queue/Queue";
 const Category = () => {
   const [selected, setSelected] = useState(false);
   const [group, setGroup] = useState([]);
-  console.log(group);
   const clickHandler = (type) => {
     if (type === "Inter") {
       setGroup(INTER);
