@@ -1,11 +1,8 @@
-.main{
-
-}
 .home {
   background-image: url("https://i.ytimg.com/vi/Jox6R5-rIH0/maxresdefault.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh - 40px);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

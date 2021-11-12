@@ -1,5 +1,6 @@
 import Home from './pages/Home/Home';
 import Music from './pages/Category/Category'
+import Play from './pages/Play/Play'
 import {Route,Switch} from 'react-router-dom'
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
       </Route>
       <Route path='/category'>
         <Music/>
+      </Route>
+      <Route path='/play'>
+        <Play/> 
       </Route>
     </Switch>
   );

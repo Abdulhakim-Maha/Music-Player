@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 const Home = () => {
   return (
     <div className={classes.main}>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className={classes.home}>
         <div className={classes.container}>
           <div className={classes.title}>

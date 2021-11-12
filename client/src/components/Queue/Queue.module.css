@@ -1,0 +1,41 @@
+.container {
+  width: 350px;
+  height: 70%;
+  margin-left: 4rem;
+  background-color: #a23cff;
+  border-radius: 10px;
+  box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.music_list {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+.music_list h3 {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+.wrapper {
+  height: 85%;
+  width: 95%;
+  background-color: aliceblue;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+.btn_wrapper {
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+}
+.btn_play {
+	color:white;
+}

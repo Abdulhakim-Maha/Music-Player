@@ -3,33 +3,30 @@ import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
 import UndoIcon from "@mui/icons-material/Undo";
-import { INTER, KPOP, THAI, CHILL} from "../../DummyData";
+import { INTER, KPOP, THAI, CHILL } from "../../DummyData";
+import Queue from "../../components/Queue/Queue";
 
 const Category = () => {
   const [selected, setSelected] = useState(false);
   const [group, setGroup] = useState([]);
-  console.log(group)
+  console.log(group);
   const clickHandler = (type) => {
-    if(type === 'Inter'){
-      setGroup(INTER)
-    }
-    else if(type === 'K-POP'){
-      setGroup(KPOP)
-    }
-    else if(type === 'Thai'){
-      setGroup(THAI)
-    }
-    else if(type === 'Chill'){
-      setGroup(CHILL)
+    if (type === "Inter") {
+      setGroup(INTER);
+    } else if (type === "K-POP") {
+      setGroup(KPOP);
+    } else if (type === "Thai") {
+      setGroup(THAI);
+    } else if (type === "Chill") {
+      setGroup(CHILL);
     }
     setSelected((prev) => !prev);
   };
-  const undoHandler = () =>{
+  const undoHandler = () => {
     setSelected((prev) => !prev);
-  }
+  };
   const Inter = () => {
     return (
-      <div className={classes.category}>
         <div className={classes.container}>
           <div className={classes.wrapper}>
             <h2 className={classes.head}>Select Music</h2>
@@ -40,17 +37,15 @@ const Category = () => {
             />
           </div>
           <ul className={classes.inner_container_music}>
-            {group.map(music => {
-              return <Music music={music} />
+            {group.map((music) => {
+              return <Music music={music} />;
             })}
           </ul>
         </div>
-      </div>
     );
   };
   const Default = () => {
     return (
-      <div className={classes.category}>
         <div className={classes.container}>
           <h2 className={classes.head}>Select Category</h2>
           <ul className={classes.inner_container}>
@@ -84,10 +79,14 @@ const Category = () => {
             />
           </ul>
         </div>
-      </div>
     );
   };
-  return <React.Fragment>{!selected ? <Default /> : <Inter />}</React.Fragment>;
+  return (
+    <div className={classes.category}>
+      {!selected ? <Default /> : <Inter />}
+      <Queue/>
+    </div>
+  );
 };
 
 export default Category;
