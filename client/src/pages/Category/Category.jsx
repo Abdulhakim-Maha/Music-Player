@@ -37,7 +37,7 @@ const Category = () => {
           </div>
           <ul className={classes.inner_container_music}>
             {group.map((music) => {
-              return <Music music={music} />;
+              return <Music key={music.id} music={music} />;
             })}
           </ul>
         </div>

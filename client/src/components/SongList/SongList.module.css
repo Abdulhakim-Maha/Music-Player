@@ -30,3 +30,15 @@
   margin-left: 1rem;
   color: rgb(241, 236, 236);
 }
+.btn_cancel{
+  margin-left: 7rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color:gray ; */
+}
+.cancel{
+  color: rgba(214, 16, 16, 0.932);
+}

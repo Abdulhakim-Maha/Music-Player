@@ -2,7 +2,8 @@ import React from "react";
 
 const MusicContext = React.createContext({
 	items : [],
-	handler: (item) => {},
+	addItem: (item) => {},
+	removeItem: (id) => {},
 })
 
 export default MusicContext
