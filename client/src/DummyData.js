@@ -429,7 +429,7 @@ export const THAI = [
     },
 ]
 
-export const CHILL = [
+export const JPOP = [
 	{
         id: 401,
         artist: 'คิงส์ ชนาวิทย์',

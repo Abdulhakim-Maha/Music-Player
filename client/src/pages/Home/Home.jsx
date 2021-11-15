@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./Home.module.css";
 import MusicNoteOutlinedIcon from "@mui/icons-material/MusicNoteOutlined";
+
 const Home = () => {
   return (
     <div className={classes.main}>

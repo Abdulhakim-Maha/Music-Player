@@ -31,6 +31,9 @@
   margin-left: 1rem;
   color: rgb(241, 236, 236);
 }
+.wrapper p{
+  font-size: 14px;
+}
 .btn_cancel{
   position: absolute;
   top: -9px;

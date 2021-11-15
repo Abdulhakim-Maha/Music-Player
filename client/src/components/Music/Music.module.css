@@ -20,6 +20,12 @@
   height: 150px;
   object-fit: cover;
 }
+.container h3{
+  font-size: 14px;
+}
+.container p{
+  font-size: 10px;
+}
 /* On Selected */
 .selected_container {
   width: 170px;
@@ -47,4 +53,11 @@
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.selected_container h3{
+  font-size: 14px;
+}
+.selected_container p{
+  font-size: 10px;
 }

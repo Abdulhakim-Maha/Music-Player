@@ -1,9 +1,14 @@
 .container{
 	width: 50%;
-	height: 100px;
+	height: 170px;
 	border-radius: 10px;
 	background-color: white;
 	border: 1px solid gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
 }
 .container img {
 	width: 50px;

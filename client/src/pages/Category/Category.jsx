@@ -3,7 +3,7 @@ import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
 import UndoIcon from "@mui/icons-material/Undo";
-import { INTER, KPOP, THAI, CHILL } from "../../DummyData";
+import { INTER, KPOP, THAI, JPOP } from "../../DummyData";
 import Queue from "../../components/Queue/Queue";
 
 const Category = () => {
@@ -17,7 +17,7 @@ const Category = () => {
     } else if (type === "Thai") {
       setGroup(THAI);
     } else if (type === "J-POP") {
-      setGroup(CHILL);
+      setGroup(JPOP);
     }
     setSelected((prev) => !prev);
   };
