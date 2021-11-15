@@ -1,3 +1,12 @@
+.play_container{
+  background-image: url("https://i.ytimg.com/vi/Jox6R5-rIH0/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container{
 	width: 50%;
 	height: 170px;

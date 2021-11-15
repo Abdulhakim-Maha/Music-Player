@@ -432,9 +432,143 @@ export const THAI = [
 export const JPOP = [
 	{
         id: 401,
-        artist: 'คิงส์ ชนาวิทย์',
-        title:'หนังสือเล่มเก่า',
-        img_src:'/Image-THAI/หนังสือเล่มเก่า.jpg',
-        src : '/THAI/หนังสือเล่มเก่า.mp3'
+        artist: 'fhána',
+        title:'Aozora no Rhapsody',
+        img_src:'/JPOP/Aozora no Rhapsody.jpg',
+        src : '/JPOP/Aozora no Rhapsody.mp3'
     },
+    {
+        id: 402,
+        artist: 'Vickeblanka',
+        title:'Black Catcher',
+        img_src:'/JPOP/Black Catcher.jfif',
+        src : '/JPOP/Black Catcher.mp3'
+    },
+    {
+        id: 403,
+        artist: 'Vickeblanka',
+        title:'Black Rover',
+        img_src:'/JPOP/Black Rover.jpg',
+        src : '/JPOP/Black Rover.mp3'
+    },
+    {
+        id: 404,
+        artist: 'FLOW',
+        title:'Colors',
+        img_src:'/JPOP/Colors.jpg',
+        src : '/JPOP/Colors.mp3'
+    },
+    {
+        id: 405,
+        artist: 'RADWIMPS',
+        title:'Zenzenzense',
+        img_src:'/JPOP/Zenzenzense.jpg',
+        src : '/JPOP/Zenzenzense.mp3'
+    },
+    {
+        id: 406,
+        artist: 'EGOIST',
+        title:'Departures',
+        img_src:'/JPOP/Departures.png',
+        src : '/JPOP/Departures.mp3'
+    },
+    {
+        id: 407,
+        artist: 'EGOIST',
+        title:'Euterpe',
+        img_src:'/JPOP/Euterpe.png',
+        src : '/JPOP/Euterpe.mp3'
+    },
+    {
+        id: 408,
+        artist: 'RADWIMPS',
+        title:'Yumetorou',
+        img_src:'/JPOP/Yumetorou.jpg',
+        src : '/JPOP/Yumetorou.mp3'
+    },
+    {
+        id: 409,
+        artist: 'SawanoHiroyuki[nZk]:Akihito Okano',
+        title:'EVERCHiLD',
+        img_src:'/JPOP/EVERCHiLD.png',
+        src : '/JPOP/EVERCHiLD.mp3'
+    },
+    {
+        id: 410,
+        artist: 'TOMORROW X TOGETHER',
+        title:'Everlasting Shine',
+        img_src:'/JPOP/Everlasting Shine.jpg',
+        src : '/JPOP/Everlasting Shine.mp3'
+    },
+    {
+        id: 411,
+        artist: 'RADWIMPS ft.Toko Miura',
+        title:'Grand Escape',
+        img_src:'/JPOP/Grand Escape.jpg',
+        src : '/JPOP/Grand Escape.mp3'
+    },
+    {
+        id: 412,
+        artist: 'Franchouchou',
+        title:'Kagayaite',
+        img_src:'/JPOP/Kagayaite.png',
+        src : '/JPOP/Kagayaite.mp3'
+    },
+    {
+        id: 413,
+        artist: 'Masaki Suda',
+        title:'Long Hope Philia',
+        img_src:'/JPOP/Long Hope Philia.jpg',
+        src : '/JPOP/Long Hope Philia.mp3'
+    },
+    {
+        id: 414,
+        artist: 'Super Chorogons',
+        title:'Maids With Dragons',
+        img_src:'/JPOP/Maids With Dragons.jpg',
+        src : '/JPOP/Maids With Dragons.mp3'
+    },
+    {
+        id: 415,
+        artist: 'supercell',
+        title:'My Dearest',
+        img_src:'/JPOP/My Dearest.jpg',
+        src : '/JPOP/My Dearest.mp3'
+    },
+    {
+        id: 416,
+        artist: 'supercell',
+        title:'The Bravery',
+        img_src:'/JPOP/The Bravery.jpg',
+        src : '/JPOP/The Bravery.mp3'
+    },
+    {
+        id: 417,
+        artist: 'RADWIMPS',
+        title:'Nandemonaiya',
+        img_src:'/JPOP/Nandemonaiya.jpg',
+        src : '/JPOP/Nandemonaiya.mp3'
+    },
+    {
+        id: 418,
+        artist: 'BLUE ENCOUNT',
+        title:'Polaris',
+        img_src:'/JPOP/Polaris.jpg',
+        src : '/JPOP/Polaris.mp3'
+    },
+    {
+        id: 419,
+        artist: 'MADKID',
+        title:'RISE',
+        img_src:'/JPOP/RISE.jpg',
+        src : '/JPOP/RISE.mp3'
+    },
+    {
+        id: 420,
+        artist: 'RADWIMPS',
+        title:'Sparkle',
+        img_src:'/JPOP/Sparkle.jpg',
+        src : '/JPOP/Sparkle.mp3'
+    },
+    
 ]

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import MusicContext from "../../store/music-context";
 import classes from "./Queue.module.css";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
