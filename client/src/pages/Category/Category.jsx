@@ -83,7 +83,7 @@ const Category = () => {
   return (
     <div className={classes.category}>
       {!selected ? <Default /> : <Inter />}
-      <Queue/>
+      <Queue link_to={'/play'}/>
     </div>
   );
 };

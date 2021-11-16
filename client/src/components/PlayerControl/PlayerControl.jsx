@@ -4,7 +4,7 @@ import classes from "./PlayerControl.module.css";
 import Slider from "../slider/Slider";
 import ControlPanel from "../controls/ControlPanel";
 
-function PlayerControl({ song }) {
+function PlayerControl({ song, nextClick, prevClick}) {
   const [percentage, setPercentage] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -66,6 +66,8 @@ function PlayerControl({ song }) {
           isPlaying={isPlaying}
           duration={duration}
           currentTime={currentTime}
+          nextClick={nextClick}
+          prevClick={prevClick}
         />
       </div>
     </div>

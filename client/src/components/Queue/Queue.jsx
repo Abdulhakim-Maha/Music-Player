@@ -6,8 +6,9 @@ import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import SongList from "../SongList/SongList";
 import BlockIcon from "@mui/icons-material/Block";
+import HomeIcon from "@mui/icons-material/Home";
 
-const Queue = () => {
+const Queue = ({ link_to }) => {
   const musicCtx = useContext(MusicContext);
   console.log(musicCtx.items);
   const NoList = () => {
@@ -38,12 +39,26 @@ const Queue = () => {
       </div>
       {musicCtx.items.length === 0 ? <NoList /> : <List />}
       <Link
-        to={musicCtx.items.length === 0 ? "#" : "/play"}
+        to={musicCtx.items.length === 0 ? "#" : link_to}
         className={classes.btn_wrapper}
       >
-        <IconButton size="medium">
-          <PlayCircleIcon className={classes.btn_play} sx={{ fontSize: 40 }} />
-        </IconButton>
+        {link_to === "/category" && (
+          <IconButton size="medium">
+            <HomeIcon
+              className={classes.btn_play}
+              sx={{ fontSize: 40 }}
+            />
+          </IconButton>
+        )}
+        {link_to === '/play' && (
+          <IconButton size="medium">
+            <PlayCircleIcon
+              className={classes.btn_play}
+              sx={{ fontSize: 40 }}
+            />
+          </IconButton>
+
+        )}
       </Link>
     </div>
   );

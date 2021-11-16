@@ -9,3 +9,24 @@
   font-weight: 200;
   color: rgb(196, 196, 196);
 }
+.wrapper{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prev,.next{
+ color:white; 
+}
+.prev {
+  margin-right: 5px;
+}
+.prev:hover{
+  color: rgb(218, 55, 145);
+}
+.nexr{
+  margin-left: 5px;
+}
+.next:hover{
+  color: rgb(218, 55, 145);
+}
