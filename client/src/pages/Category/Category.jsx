@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
 import UndoIcon from "@mui/icons-material/Undo";
-import { INTER, KPOP, THAI, JPOP } from "../../DummyData";
+// import { INTER, KPOP, THAI, JPOP } from "../../DummyData";
 import Queue from "../../components/Queue/Queue";
+import axios from 'axios'
 
 const Category = () => {
   const [selected, setSelected] = useState(false);
+  const [data, setData] = useState({})
   const [group, setGroup] = useState([]);
+  console.log(data)
+  useEffect(()=>{
+    const fechData = async () =>{
+      const res = await axios.get('/getData')
+      setData(res.data)
+    }
+    fechData()
+  },[])
+
   const clickHandler = (type) => {
     if (type === "Inter") {
-      setGroup(INTER);
+      setGroup(data.INTER);
     } else if (type === "K-POP") {
-      setGroup(KPOP);
+      setGroup(data.KPOP);
     } else if (type === "Thai") {
-      setGroup(THAI);
+      setGroup(data.THAI);
     } else if (type === "J-POP") {
-      setGroup(JPOP);
+      setGroup(data.JPOP);
     }
     setSelected((prev) => !prev);
   };

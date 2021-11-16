@@ -5,6 +5,7 @@ import Slider from "../slider/Slider";
 import ControlPanel from "../controls/ControlPanel";
 
 function PlayerControl({ song, nextClick, prevClick}) {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER
   const [percentage, setPercentage] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -47,7 +48,7 @@ function PlayerControl({ song, nextClick, prevClick}) {
   return (
     <div className={classes.player_container}>
       <div className={classes.img_wrapper}>
-        <img src={song.img_src} alt="" />
+        <img src={PF + song.img_src} alt="" />
       </div>
       <div className={classes.another_control}>
         <h1 className={classes.title}>{song.title}</h1>
@@ -59,7 +60,7 @@ function PlayerControl({ song, nextClick, prevClick}) {
           onLoadedData={(e) => {
             setDuration(e.currentTarget.duration.toFixed(2));
           }}
-          src={song.src}
+          src={PF + song.src}
         ></audio>
         <ControlPanel
           play={play}
