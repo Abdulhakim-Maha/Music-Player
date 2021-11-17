@@ -3,13 +3,13 @@ import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
 import UndoIcon from "@mui/icons-material/Undo";
-// import { INTER, KPOP, THAI, JPOP } from "../../DummyData";
+// import { INTER, KPOP, THAI, JPOP } from "../../../public/DummyData";
 import Queue from "../../components/Queue/Queue";
 import axios from 'axios'
 
 const Category = () => {
   const [selected, setSelected] = useState(false);
-  const [data, setData] = useState({})
+  const [data, setData] = useState(null)
   const [group, setGroup] = useState([]);
   console.log(data)
   useEffect(()=>{
