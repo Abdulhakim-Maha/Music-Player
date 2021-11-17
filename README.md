@@ -29,7 +29,7 @@ cd server
 หลังจากที่เข้าไปที่โฟลเคอร์ server แล้วให้พิมพ์คำสั่งด้านล่างนี้
 #### ติดตั้ง fastAPI
 ```
-pip install fastAPI
+pip install fastapi
 ```
 #### ติดตั้งตัวจำลอง server
 ``` 
