@@ -4,7 +4,7 @@ Data Structure Project with React.js and FastAPI
 
 ## การติดตั้ง
 
-ดาวน์โหลด Node.js ลงเครื่องก่อน โดยไปที่ https://nodejs.org/en/
+ดาวน์โหลด Node.js ลงเครื่องก่อน โดยไปที่ https://nodejs.org/en/ ดาวน์โหลดแล้วติดตั้ง
 จากนั้นดาวน์โหลดโปรเจ็คลงเครื่องหรือ clone ให้เรียบร้อย
 
 ### React Installation
@@ -36,7 +36,28 @@ pip install fastAPI
 pip install uvicorn
 ```
 
-เสร็จการติดตั้งแล้ว
+เสร็จขั้นตอนการติดตั้ง
+
+## วิธีการรัน
+
+### terminal ที่อยู่โฟลเดอร์ server
+
+ให้พิมพ์คำสั่ง
+
+```
+uvicorn main:app --reload
+```
+
+### terminal ที่อยู่โฟลเดอร์ client
+
+ให้พิมพ์คำสั่ง
+
+```
+npm start
+```
+
+เป็นอันเสร็จเรียบร้อบแล้ว
+
 
 
 
