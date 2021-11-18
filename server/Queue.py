@@ -19,12 +19,15 @@ class Queue:
     
     def isEmpty(self):
         return len(self.items) == 0
-    def remove(self,id):
-        pass
 
-    def dequeueById(self,id):
+    def removeById(self,id):
+        Count=0
         for i in self.items:
-            pass
+            if i.id == id:
+                del self.items[Count]
+            Count+=1
+        return self.items
+
 
     def size(self):
         return len(self.items)

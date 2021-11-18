@@ -70,8 +70,9 @@ async def postMusic(item: Music):
 
 @app.delete('/api/deleteMusic')
 async def deleteMusic(id : int):
-    print(id)
-    return id
+    d = Q.removeById(id)
+    print(d)
+    return d
 
 @app.get('/api/getMusic/{type}')
 async def getMusicById(type:str):
