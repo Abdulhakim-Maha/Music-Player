@@ -25,6 +25,11 @@ const Category = () => {
     fechData();
   }, []);
 
+  const SortTofechData = async (type) => {
+    const res = await axios.get("/getData/"+ type);
+    setData(res.data);
+  };
+
   const clickHandler = (type) => {
     if (type === "Inter") {
       setGroup(data.INTER);
@@ -42,17 +47,18 @@ const Category = () => {
   };
 
   // Component
-  const Inter = () => {
-    const [age, setAge] = useState('')
+  const ShowMusic = ({sort}) => {
+    const [age, setAge] = useState("");
 
     const handleChange = (event) => {
       setAge(event.target.value);
-      console.log("/getData/" + event.target.value)
-      const fechData = async () => {
-        const res = await axios.get("/getData/" + event.target.value );
-        setData(res.data);
-      };
-      fechData();
+      // console.log("/getData/" + event.target.value)
+      // const fechData = async () => {
+      //   const res = await axios.get("/getData/" + event.target.value);
+      //   setData(res.data);
+      // };
+      // fechData();
+      sort(event.target.value)
     };
     return (
       <div className={classes.container}>
@@ -133,7 +139,7 @@ const Category = () => {
   };
   return (
     <div className={classes.category}>
-      {!selected ? <Default /> : <Inter />}
+      {!selected ? <Default /> : <ShowMusic sort={SortTofechData} />}
       <Queue link_to={"/play"} />
     </div>
   );

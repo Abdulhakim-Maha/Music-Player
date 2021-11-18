@@ -10,7 +10,7 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const Queue = ({ link_to }) => {
   const musicCtx = useContext(MusicContext);
-  console.log(musicCtx.items);
+  // console.log(musicCtx.items);
   const NoList = () => {
     return (
       <div className={classes.wrapper}>
@@ -44,20 +44,16 @@ const Queue = ({ link_to }) => {
       >
         {link_to === "/category" && (
           <IconButton size="medium">
-            <HomeIcon
-              className={classes.btn_play}
-              sx={{ fontSize: 40 }}
-            />
+            <HomeIcon className={classes.btn_play} sx={{ fontSize: 40 }} />
           </IconButton>
         )}
-        {link_to === '/play' && (
+        {link_to === "/play" && (
           <IconButton size="medium">
             <PlayCircleIcon
               className={classes.btn_play}
               sx={{ fontSize: 40 }}
             />
           </IconButton>
-
         )}
       </Link>
     </div>

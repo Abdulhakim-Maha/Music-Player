@@ -1,10 +1,24 @@
+from typing import List
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from DATA import INTER,JPOP,KPOP,THAI
 from Sort import SortByTitle
+from Queue import Queue
+from pydantic import BaseModel
 
+#class Model
+class Music(BaseModel):
+    id : int
+    artist : str
+    title: str
+    img_src : str
+    src : str
+
+#run
 app = FastAPI()
+Q = Queue()
+
 
 #config
 origins = [
@@ -47,7 +61,21 @@ async def musicList(type:str):
         pass
     return {'INTER':inter, 'KPOP':kpop, 'THAI':thai, 'JPOP':jpop} 
 
-@app.get('/api/getMusic/{id}')
-async def getMusicById():
+@app.post('/api/postMusic')
+async def postMusic(queue: List[Music]):
+    # print(queue)
+    for i in queue:
+        Q.enqueue(i)
+    Q.print_queue()
+    return queue
+
+@app.delete('/api/deleteMusic')
+async def deleteMusic(item: Music):
+    pass
+
+@app.get('/api/getMusic/{type}')
+async def getMusicById(type:str):
+    if type == 'dequeue':
+        print(Q.dequeueF())
     return 
 
