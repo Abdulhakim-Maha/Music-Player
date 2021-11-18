@@ -3,27 +3,29 @@ import MusicContext from "../../store/music-context";
 import classes from "./Play.module.css";
 import PlayerControl from "../../components/PlayerControl/PlayerControl";
 import Queue from "../../components/Queue/Queue";
+import axios from "axios";
+import { Redirect } from "react-router";
 
 const Play = () => {
   const [current, setCurrent] = useState(0);
   const musicCtx = useContext(MusicContext);
-  // const [list, setList] = useState([]);
-  // console.log(list);
-  // console.log(musicCtx.items[0])
-  // useEffect(() => {
-  //   const postMusic = async () => {
-  //     try {
-  //       const res = await axios.post("postMusic", musicCtx.items);
-  //       setList(res.data);
-  //       // console.log(res.data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   postMusic();
-  // }, [musicCtx.items]);
+  useEffect(() => {
+    const postMusic = async () => {
+      try {
+        const res = await axios.get("/getMusic/dequeue");
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    postMusic();
+  }, [musicCtx.items]);
 
   const nextSongHandler = () => {
+    axios
+      .get("getMusic/next")
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
     setCurrent((prev) => {
       if (prev === musicCtx.items.length - 1) {
         return 0;
@@ -43,12 +45,15 @@ const Play = () => {
   };
   return (
     <div className={classes.play_container}>
-      <PlayerControl
-        song={musicCtx.items[current]}
-        nextClick={nextSongHandler}
-        prevClick={prevSongHandler}
-      />
-      )
+      {musicCtx.items.length === 0 ? (
+        <Redirect to="/category" />
+      ) : (
+        <PlayerControl
+          song={musicCtx.items[current]}
+          nextClick={nextSongHandler}
+          prevClick={prevSongHandler}
+        />
+      )}
       <Queue link_to={"/category"} />
     </div>
   );

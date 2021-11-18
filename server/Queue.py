@@ -22,6 +22,10 @@ class Queue:
     def remove(self,id):
         pass
 
+    def dequeueById(self,id):
+        for i in self.items:
+            pass
+
     def size(self):
         return len(self.items)
 
@@ -35,7 +39,8 @@ class Queue:
         self.count += 1
         if self.count > len(q.items)-1:
             self.count = 0
-        print("Sample Music :", q.items[self.count])
+        # print("Sample Music :", q.items[self.count])
+        return q.items[self.count]
     
 
 

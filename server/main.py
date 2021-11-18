@@ -62,21 +62,26 @@ async def musicList(type:str):
     return {'INTER':inter, 'KPOP':kpop, 'THAI':thai, 'JPOP':jpop} 
 
 @app.post('/api/postMusic')
-async def postMusic(queue: List[Music]):
+async def postMusic(item: Music):
     # print(queue)
-    for i in queue:
-        Q.enqueue(i)
+    Q.enqueue(item)
     Q.print_queue()
-    return queue
+    return item
 
 @app.delete('/api/deleteMusic')
-async def deleteMusic(item: Music):
-    print(item)
-    return item
+async def deleteMusic(id : int):
+    print(id)
+    return id
 
 @app.get('/api/getMusic/{type}')
 async def getMusicById(type:str):
     if type == 'dequeue':
-        print(Q.dequeueF())
-    return 
-
+        d = Q.dequeueF() 
+        print('Dequeue :',d)
+        return d
+    elif type == 'next':
+        d = Q.next()
+        print('Dequeue :',d)
+        return d
+    elif type == 'back':
+        pass
