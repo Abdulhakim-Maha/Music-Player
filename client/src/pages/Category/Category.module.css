@@ -72,3 +72,12 @@
 ::-webkit-scrollbar-thumb {
   background-color:  rgb(184, 182, 182);
 }
+.select{
+  color: white;
+}
+.inputLabel{
+  color: white;
+}
+.formControl{
+  height: 30%;
+}
