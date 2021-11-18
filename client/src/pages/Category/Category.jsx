@@ -16,7 +16,7 @@ const Category = () => {
   const [selected, setSelected] = useState(false);
   const [data, setData] = useState(null);
   const [group, setGroup] = useState([]);
-  console.log(data);
+  // console.log(data);
   useEffect(() => {
     const fechData = async () => {
       const res = await axios.get("/getData/title");

@@ -71,7 +71,8 @@ async def postMusic(queue: List[Music]):
 
 @app.delete('/api/deleteMusic')
 async def deleteMusic(item: Music):
-    pass
+    print(item)
+    return item
 
 @app.get('/api/getMusic/{type}')
 async def getMusicById(type:str):

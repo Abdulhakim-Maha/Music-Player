@@ -7,9 +7,6 @@ const defaultState = {
 const musicReducer = (state, action) => {
   if (action.type === "ADD") {
     let updatedItems;
-    // previousItems = [...state.items]
-    // updatedItems = previousItems.concat(action.item)
-    // updatedItems = state.items.filter((item) => item.id !== action.item.id);
     updatedItems = state.items.concat(action.item);
     return {
       items: updatedItems,

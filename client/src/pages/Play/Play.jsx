@@ -3,25 +3,25 @@ import MusicContext from "../../store/music-context";
 import classes from "./Play.module.css";
 import PlayerControl from "../../components/PlayerControl/PlayerControl";
 import Queue from "../../components/Queue/Queue";
-import axios from "axios";
 
 const Play = () => {
   const [current, setCurrent] = useState(0);
   const musicCtx = useContext(MusicContext);
-  const [list, setList] = useState([])
+  // const [list, setList] = useState([]);
+  // console.log(list);
   // console.log(musicCtx.items[0])
-  useEffect(() => {
-    const postMusic = async () => {
-      try {
-        const res = await axios.post("postMusic", musicCtx.items);
-        setList(res.data)
-        // console.log(res.data);
-      } catch (err) {
-        console.log(err)
-      }
-    };
-    postMusic();
-  }, [musicCtx.items]);
+  // useEffect(() => {
+  //   const postMusic = async () => {
+  //     try {
+  //       const res = await axios.post("postMusic", musicCtx.items);
+  //       setList(res.data);
+  //       // console.log(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   postMusic();
+  // }, [musicCtx.items]);
 
   const nextSongHandler = () => {
     setCurrent((prev) => {
@@ -48,6 +48,7 @@ const Play = () => {
         nextClick={nextSongHandler}
         prevClick={prevSongHandler}
       />
+      )
       <Queue link_to={"/category"} />
     </div>
   );

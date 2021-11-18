@@ -4,10 +4,20 @@ import classes from "./SongList.module.css";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 
 const SongList = ({ song }) => {
-	const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const musicCtx = useContext(MusicContext);
+  // console.log(JSON.stringify(song))
   const removeSong = () => {
     musicCtx.removeItem(song.id);
+    // const remove = async () => {
+    //   try {
+    //     const res = await axios.delete("deleteMusic",JSON.stringify(song));
+    //     console.log(res.data)
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // };
+    // remove()
   };
   return (
     <div className={classes.container}>
@@ -17,7 +27,11 @@ const SongList = ({ song }) => {
         <p>{song.artist}</p>
       </div>
       <div className={classes.btn_cancel}>
-        <RemoveCircleIcon className={classes.cancel} fontSize='small' onClick={removeSong} />
+        <RemoveCircleIcon
+          className={classes.cancel}
+          fontSize="small"
+          onClick={removeSong}
+        />
       </div>
     </div>
   );
