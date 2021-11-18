@@ -35,6 +35,10 @@ const Play = () => {
     });
   };
   const prevSongHandler = () => {
+    axios
+      .get("getMusic/back")
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
     setCurrent((prev) => {
       if (prev === 0) {
         return musicCtx.items.length - 1;

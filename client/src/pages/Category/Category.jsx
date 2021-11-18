@@ -3,7 +3,6 @@ import Group from "../../components/Group/Group";
 import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
 import UndoIcon from "@mui/icons-material/Undo";
-// import { INTER, KPOP, THAI, JPOP } from "../../../public/DummyData";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -52,12 +51,6 @@ const Category = () => {
 
     const handleChange = (event) => {
       setAge(event.target.value);
-      // console.log("/getData/" + event.target.value)
-      // const fechData = async () => {
-      //   const res = await axios.get("/getData/" + event.target.value);
-      //   setData(res.data);
-      // };
-      // fechData();
       sort(event.target.value)
     };
     return (

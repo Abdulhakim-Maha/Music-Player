@@ -32,15 +32,16 @@ class Queue:
     def back(self):
         self.count -= 1
         if self.count < 0:
-            self.count = len(q.items)-1
-        print("Sample Music :", q.items[self.count])
+            self.count = len(self.items)-1
+        # print("Sample Music :", q.items[self.count])
+        return self.items[self.count]
 
     def next(self):
         self.count += 1
-        if self.count > len(q.items)-1:
+        if self.count > len(self.items)-1:
             self.count = 0
         # print("Sample Music :", q.items[self.count])
-        return q.items[self.count]
+        return self.items[self.count]
     
 
 
@@ -73,7 +74,7 @@ if __name__ == '__main__':
     while True :
         input4 = int(input("('1'-> BACK / '2'-> NEXT) :"))
         if input4 == 1:
-            q.back()
+            print(q.back())
 
         elif input4 == 2:
-            q.next()
+            print(q.next())

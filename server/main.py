@@ -75,13 +75,14 @@ async def deleteMusic(id : int):
 
 @app.get('/api/getMusic/{type}')
 async def getMusicById(type:str):
+    d = {}
     if type == 'dequeue':
         d = Q.dequeueF() 
         print('Dequeue :',d)
-        return d
     elif type == 'next':
         d = Q.next()
-        print('Dequeue :',d)
-        return d
+        print('next :',d)
     elif type == 'back':
-        pass
+        d = Q.back()
+        print('back',d)
+    return d
