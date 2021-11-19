@@ -16,6 +16,11 @@ class Queue:
         if self.isEmpty(): 
             return
         return self.items.pop(0)
+    def peek(self):
+        if self.isEmpty():
+            return 
+        else:
+            return self.items[0]
     
     def isEmpty(self):
         return len(self.items) == 0

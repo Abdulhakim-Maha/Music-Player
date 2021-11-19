@@ -78,7 +78,7 @@ async def deleteMusic(id : int):
 async def getMusicById(type:str):
     d = {}
     if type == 'dequeue':
-        d = Q.dequeueF() 
+        d = Q.peek() 
         print('Dequeue :',d)
     elif type == 'next':
         d = Q.next()
