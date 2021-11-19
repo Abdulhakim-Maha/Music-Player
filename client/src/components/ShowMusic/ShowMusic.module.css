@@ -1,0 +1,68 @@
+.wrapper{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.undoicon{
+  color:white;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+.undoicon:hover{
+  color: #2FD6FE;
+}
+.container {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  /* justify-conent: ; */
+  align-items: center;
+  /* margin-left: 13rem; */
+  color: black;
+  border-radius: 10px;
+  background-color: #a23cff;
+  box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 16px 15px 32px -11px rgba(0, 0, 0, 0.83);
+}
+.head {
+  font-family: "Mochiy Pop One", sans-serif;
+  margin: 7px;
+  color: white;
+}
+.inner_container {
+  width: 97%;
+  height: 89%;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.inner_container_music {
+  width: 97%;
+  height: 89%;
+  border-radius: 10px;
+  background-color: white;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.select{
+  color: white;
+}
+.selected{
+  color: white;
+}
+.inputLabel{
+  color: white;
+}
+.formControl{
+  height: 30%;
+}

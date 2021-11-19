@@ -10,7 +10,7 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const Queue = ({ link_to }) => {
   const musicCtx = useContext(MusicContext);
-  console.log(musicCtx.items);
+  // console.log(musicCtx.items);
   const NoList = () => {
     return (
       <div className={classes.wrapper}>
