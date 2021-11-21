@@ -33,7 +33,10 @@ class Queue:
             Count+=1
         return self.items
 
-
+    def set_count(self):
+        self.count = 0
+        return self.count
+        
     def size(self):
         return len(self.items)
 

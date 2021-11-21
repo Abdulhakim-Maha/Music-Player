@@ -17,8 +17,7 @@ const Category = () => {
   const [data, setData] = useState(null);
   const [group, setGroup] = useState([]);
   const [cate, setCate] = useState([])
-  // const [isFetching, setIsFetching] = useState(false)
-  // console.log(data);
+
   useEffect(() => {
     const fechData = async () => {
       const res = await axios.get("/getData/title");
@@ -28,16 +27,13 @@ const Category = () => {
   }, []);
 
   const SortTofechData = async (type) => {
-    // setSelected(false)
-    // setIsFetching(true)
     const res = await axios.get("/getData/" + type);
     setData(res.data);
-    console.log(res.data)
-    // setGroup(data.INTER);
+    // console.log(res.data)
     setGroup([])
     if (cate === "Inter") {
       setGroup(res.data.INTER);
-      console.log(group)
+      // console.log(group)
     } else if (cate === "K-POP") {
       setGroup(res.data.KPOP);
     } else if (cate === "Thai") {
@@ -45,24 +41,7 @@ const Category = () => {
     } else if (cate === "J-POP") {
       setGroup(res.data.JPOP);
     }
-    // setSelected(true)
-    // console.log(res.data.INTER)
-    // setGroup(res.data)
-    // setIsFetching(false)
-    // setGropToSort(res.data)
   };
-  // const setGropToSort = (data) =>{
-  //   if (cate === "Inter") {
-  //     setGroup(data.INTER);
-  //     console.log(group)
-  //   } else if (cate === "K-POP") {
-  //     setGroup(data.KPOP);
-  //   } else if (cate === "Thai") {
-  //     setGroup(data.THAI);
-  //   } else if (cate === "J-POP") {
-  //     setGroup(data.JPOP);
-  //   }
-  // }
 
   const clickHandler = (type) => {
     if (type === "Inter") {
@@ -172,9 +151,6 @@ const Category = () => {
   return (
     <div className={classes.category}>
       {!selected ? <Default /> : <ShowMusic sort={SortTofechData} category={group} undo={undoHandler} />}
-      {/* {!selected && <Default/>} */}
-      {/* {!isFetching && selected && <ShowMusic sort={SortTofechData} category={group} />} */}
-      {/* {isFetching && <p>...Loading</p>} */}
       <Queue link_to={"/play"} />
     </div>
   );

@@ -87,3 +87,10 @@ async def getMusicById(type:str):
         d = Q.back()
         print('back',d)
     return d
+
+@app.get('/api/playMusic')
+async def playMusic():
+    d = Q.set_count()
+    print('count :',d)
+    return { 'setCound' : 'success'}
+

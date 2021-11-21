@@ -7,10 +7,19 @@ import { Link } from "react-router-dom";
 import SongList from "../SongList/SongList";
 import BlockIcon from "@mui/icons-material/Block";
 import HomeIcon from "@mui/icons-material/Home";
+import axios from "axios";
 
 const Queue = ({ link_to }) => {
   const musicCtx = useContext(MusicContext);
   // console.log(musicCtx.items);
+  const playClickHandler = async () =>{
+    try{
+      const res = await axios.get('/playMusic')
+      console.log(res.data)
+    }catch(err){
+      console.log(err)
+    }
+  }
   const NoList = () => {
     return (
       <div className={classes.wrapper}>
@@ -21,6 +30,7 @@ const Queue = ({ link_to }) => {
       </div>
     );
   };
+
   const List = () => {
     return (
       <>
@@ -52,6 +62,7 @@ const Queue = ({ link_to }) => {
             <PlayCircleIcon
               className={classes.btn_play}
               sx={{ fontSize: 40 }}
+              onClick={playClickHandler}
             />
           </IconButton>
         )}

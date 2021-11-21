@@ -5,6 +5,18 @@
   align-items: center;
   width: 100%;
 }
+.select{
+  color: white;
+}
+.selected{
+  color: white;
+}
+.inpLabel{
+  color: white;
+}
+.formControl{
+  height: 30%;
+}
 .undoicon{
   color:white;
   position: absolute;
@@ -53,16 +65,4 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-.select{
-  color: white;
-}
-.selected{
-  color: white;
-}
-.inputLabel{
-  color: white;
-}
-.formControl{
-  height: 30%;
 }

@@ -23,7 +23,8 @@ const ShowMusic = ({ sort ,category, undo}) => {
           <FormControl fullWidth className={classes.formControl}>
             <InputLabel
               id="demo-simple-select-label"
-              className={classes.inputLabel}
+              className={classes.inpLabel}
+              sx ={{color:'#fff'}}
             >
               Sort
             </InputLabel>
