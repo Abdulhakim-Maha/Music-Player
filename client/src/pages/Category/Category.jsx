@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Group from "../../components/Group/Group";
-// import Music from "../../components/Music/Music";
 import classes from "./Category.module.css";
-// import UndoIcon from "@mui/icons-material/Undo";
-// import Box from "@mui/material/Box";
-// import InputLabel from "@mui/material/InputLabel";
-// import MenuItem from "@mui/material/MenuItem";
-// import FormControl from "@mui/material/FormControl";
-// import Select from "@mui/material/Select";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
@@ -29,6 +22,13 @@ const Category = () => {
     fechData();
   }, []);
 
+  const SearchTofetchData = async (input) => {
+    // console.log(input + ':' + cate);
+    const res = await axios.get("/search/"+cate+'?inp='+input)
+    // console.log(res.data)
+    setGroup(res.data.music)
+  };
+  
   const SortTofechData = async (type) => {
     const res = await axios.get("/getData/" + type);
     setData(res.data);
@@ -66,54 +66,6 @@ const Category = () => {
     setSelected((prev) => !prev);
   };
 
-  // Component
-  // const ShowMusic = ({ sort ,category}) => {
-  //   const [age, setAge] = useState("");
-
-  //   const handleChange = (event) => {
-  //     setAge(event.target.value);
-  //     sort(event.target.value);
-  //   };
-  //   return (
-  //     <div className={classes.container}>
-  //       <div className={classes.wrapper}>
-  //         <h2 className={classes.head}>Select Music</h2>
-  //         <Box sx={{ minWidth: 80 }}>
-  //           <FormControl fullWidth className={classes.formControl}>
-  //             <InputLabel
-  //               id="demo-simple-select-label"
-  //               className={classes.inputLabel}
-  //             >
-  //               Sort
-  //             </InputLabel>
-  //             <Select
-  //               className={classes.select}
-  //               labelId="demo-simple-select-label"
-  //               id="demo-simple-select"
-  //               value={age}
-  //               label="Age"
-  //               onChange={handleChange}
-  //             >
-  //               <MenuItem value={"Title"}>Title</MenuItem>
-  //               <MenuItem value={"Artist"}>Artist</MenuItem>
-  //               <MenuItem value={"Default"}>Default</MenuItem>
-  //             </Select>
-  //           </FormControl>
-  //         </Box>
-  //         <UndoIcon
-  //           className={classes.undoicon}
-  //           sx={{ fontSize: 50 }}
-  //           onClick={undoHandler}
-  //         />
-  //       </div>
-  //       <ul className={classes.inner_container_music}>
-  //         {category.map((music) => {
-  //           return <Music key={music.id} music={music} />;
-  //         })}
-  //       </ul>
-  //     </div>
-  //   );
-  // };
   const Default = () => {
     return (
       <div className={classes.container}>
@@ -156,14 +108,19 @@ const Category = () => {
       <div className={classes.backToHome}>
         <Link to="/">
           <IconButton>
-            <HomeIcon sx={{fontSize:50,color:'white'}}/>
+            <HomeIcon sx={{ fontSize: 50, color: "white" }} />
           </IconButton>
         </Link>
       </div>
       {!selected ? (
         <Default />
       ) : (
-        <ShowMusic sort={SortTofechData} category={group} undo={undoHandler} />
+        <ShowMusic
+          sort={SortTofechData}
+          search={SearchTofetchData}
+          category={group}
+          undo={undoHandler}
+        />
       )}
       <Queue link_to={"/play"} />
     </div>

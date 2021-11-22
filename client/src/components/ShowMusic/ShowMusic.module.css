@@ -22,7 +22,7 @@
   position: absolute;
   right: 15px;
   cursor: pointer;
-  /* margin-left: 1rem; */
+  /* margin-left: 3rem; */
 }
 .undoicon:hover{
   color: #2FD6FE;
@@ -65,4 +65,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+/* .search{
+  background-color: #2FD6FE;
+  width: ;
+} */
+.search input{
+  outline: none;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 15rem;
+  max-width: 100%; 
+}
+.submit{
+  width: 40px;
+  height: 40px;
+  margin-left: 3px;
+  border-radius: 6px;
+}
+.btn{
+  width: 45px;
+  height: 40px;
+  border-radius: 6px;
+  margin-left: 3px;
+  background-color: #2FD6FE;
 }

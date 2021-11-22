@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from DATA import INTER,JPOP,KPOP,THAI
 from Sort import SortByTitle
+from Search import search_music
 from Queue import Queue
 from pydantic import BaseModel
 
@@ -93,4 +94,10 @@ async def playMusic():
     d = Q.set_count()
     print('count :',d)
     return { 'setCound' : 'success'}
+
+@app.get('/api/search/{type}')
+async def search(type: str,inp:str):
+    d = search_music(type,inp)
+    print(d)
+    return {'music':d}
 

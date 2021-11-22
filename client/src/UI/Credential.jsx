@@ -14,8 +14,8 @@ const Credential = ({ onClose }) => {
             />
           </div>
           <p>Studen ID : 63010767</p>
-          <p>Name : Purich Janprasit </p>
-          <a href="https://github.com/Abdulhakim-Maha" target="_blank">
+          <p>Name : Phurich Chanprasit </p>
+          <a href="https://github.com/Abdulhakim-Maha" target="_blank" without rel="noreferrer">
             Fome's github
           </a>
         </div>
@@ -28,7 +28,7 @@ const Credential = ({ onClose }) => {
           </div>
           <p>Studen ID : 63010846</p>
           <p>Name : Watanai metamalueng</p>
-          <a href="https://github.com/Abdulhakim-Maha" target="_blank">
+          <a href="https://github.com/Abdulhakim-Maha" target="_blank"  rel="noreferrer" >
             Newyear's github
           </a>
         </div>
@@ -41,7 +41,7 @@ const Credential = ({ onClose }) => {
           </div>
           <p>Studen ID : 63011075</p>
           <p>Name : Abdulhakim Maha</p>
-          <a href="https://github.com/Abdulhakim-Maha" target="_blank">
+          <a href="https://github.com/Abdulhakim-Maha" target="_blank" rel="noreferrer" >
             King's github
           </a>
         </div>
@@ -54,7 +54,7 @@ const Credential = ({ onClose }) => {
           </div>
           <p>Studen ID : 63011414</p>
           <p>Name : Abdulhakim Mamu</p>
-          <a href="https://github.com/Abdulhakim-Maha" target="_blank">
+          <a href="https://github.com/Abdulhakim-Maha" target="_blank" rel="noreferrer" >
             Kim's github
           </a>
         </div>
