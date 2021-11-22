@@ -3,9 +3,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.credential{
+  width: 70px;
+  height: 70px;
+  /* background-color: beige; */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   width: 70%;
