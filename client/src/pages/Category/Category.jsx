@@ -28,7 +28,7 @@ const Category = () => {
     // console.log(res.data)
     setGroup(res.data.music)
   };
-  
+
   const SortTofechData = async (type) => {
     const res = await axios.get("/getData/" + type);
     setData(res.data);
@@ -36,7 +36,6 @@ const Category = () => {
     setGroup([]);
     if (cate === "Inter") {
       setGroup(res.data.INTER);
-      // console.log(group)
     } else if (cate === "K-POP") {
       setGroup(res.data.KPOP);
     } else if (cate === "Thai") {

@@ -7,6 +7,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import classes from "./ShowMusic.module.css";
 import Music from "../../components/Music/Music";
+import SearchIcon from '@mui/icons-material/Search';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 const ShowMusic = ({ sort, search, category, undo }) => {
   const [age, setAge] = useState("");
@@ -41,10 +43,10 @@ const ShowMusic = ({ sort, search, category, undo }) => {
             value={enterdTitle}
           />
           <button type="submit" className={classes.submit}>
-            go
+            <SearchIcon sx={{color:'white'}}/>
           </button>
           <button type="button" className={classes.btn} onClick={defaulHandler}>
-            default
+            <AccountBalanceIcon sx={{color:'white'}}/>
           </button>
         </form>
         <Box sx={{ minWidth: 80, marginRight: "2rem" }}>

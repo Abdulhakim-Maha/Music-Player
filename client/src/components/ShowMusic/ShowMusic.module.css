@@ -66,10 +66,11 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-/* .search{
-  background-color: #2FD6FE;
-  width: ;
-} */
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .search input{
   outline: none;
   font: inherit;
@@ -78,17 +79,37 @@
   border: 1px solid #ccc;
   width: 15rem;
   max-width: 100%; 
+  box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+  -webkit-box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
 }
 .submit{
-  width: 40px;
-  height: 40px;
-  margin-left: 3px;
-  border-radius: 6px;
+  width: 30px;
+  border: 0.1px solid white;
+  height: 30px;
+  background-color: transparent;
+  margin: auto 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+  -webkit-box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+}
+.submit:hover{
+  background-color: #2FD6FE;
 }
 .btn{
-  width: 45px;
-  height: 40px;
-  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  border: 0.1px solid white;
+  border-radius: 50%;
   margin-left: 3px;
+  cursor: pointer;
+  background-color:transparent;
+  box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+  -webkit-box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 5px 4px 11px -5px rgba(0, 0, 0, 0.98);
+}
+.btn:hover{
   background-color: #2FD6FE;
 }
