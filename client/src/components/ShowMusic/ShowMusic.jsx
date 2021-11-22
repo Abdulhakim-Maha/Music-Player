@@ -19,7 +19,12 @@ const ShowMusic = ({ sort ,category, undo}) => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <h2 className={classes.head}>Select Music</h2>
-        <Box sx={{ minWidth: 80 }}>
+        <div className="search">
+          <input type="text" />
+          <button>go</button>
+          <button>default</button>
+        </div>
+        <Box sx={{ minWidth: 80 ,marginRight:'1rem'}}>
           <FormControl fullWidth className={classes.formControl}>
             <InputLabel
               id="demo-simple-select-label"
@@ -45,7 +50,7 @@ const ShowMusic = ({ sort ,category, undo}) => {
         </Box>
         <UndoIcon
           className={classes.undoicon}
-          sx={{ fontSize: 50 }}
+          sx={{ fontSize: 30 }}
           onClick={undo}
         />
       </div>

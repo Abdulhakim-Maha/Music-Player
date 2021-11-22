@@ -8,15 +8,18 @@ import classes from "./Category.module.css";
 // import MenuItem from "@mui/material/MenuItem";
 // import FormControl from "@mui/material/FormControl";
 // import Select from "@mui/material/Select";
+import { Link } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
 import Queue from "../../components/Queue/Queue";
 import axios from "axios";
-import ShowMusic from '../../components/ShowMusic/ShowMusic'
+import ShowMusic from "../../components/ShowMusic/ShowMusic";
 
 const Category = () => {
   const [selected, setSelected] = useState(false);
   const [data, setData] = useState(null);
   const [group, setGroup] = useState([]);
-  const [cate, setCate] = useState([])
+  const [cate, setCate] = useState([]);
 
   useEffect(() => {
     const fechData = async () => {
@@ -30,7 +33,7 @@ const Category = () => {
     const res = await axios.get("/getData/" + type);
     setData(res.data);
     // console.log(res.data)
-    setGroup([])
+    setGroup([]);
     if (cate === "Inter") {
       setGroup(res.data.INTER);
       // console.log(group)
@@ -45,16 +48,16 @@ const Category = () => {
 
   const clickHandler = (type) => {
     if (type === "Inter") {
-      setCate('Inter')
+      setCate("Inter");
       setGroup(data.INTER);
     } else if (type === "K-POP") {
-      setCate('K-POP')
+      setCate("K-POP");
       setGroup(data.KPOP);
     } else if (type === "Thai") {
-      setCate('Thai')
+      setCate("Thai");
       setGroup(data.THAI);
     } else if (type === "J-POP") {
-      setCate('J-POP')
+      setCate("J-POP");
       setGroup(data.JPOP);
     }
     setSelected((prev) => !prev);
@@ -150,7 +153,18 @@ const Category = () => {
   };
   return (
     <div className={classes.category}>
-      {!selected ? <Default /> : <ShowMusic sort={SortTofechData} category={group} undo={undoHandler} />}
+      <div className={classes.backToHome}>
+        <Link to="/">
+          <IconButton>
+            <HomeIcon sx={{fontSize:50,color:'white'}}/>
+          </IconButton>
+        </Link>
+      </div>
+      {!selected ? (
+        <Default />
+      ) : (
+        <ShowMusic sort={SortTofechData} category={group} undo={undoHandler} />
+      )}
       <Queue link_to={"/play"} />
     </div>
   );
