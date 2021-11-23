@@ -28,12 +28,10 @@ const Home = () => {
         </div>
         <div className={classes.container}>
           <div className={classes.title}>
-            <h1>Spotify</h1>
-            <h4>Make your life</h4>
-            <h4>More happier</h4>
-            <Link to="/category" className={classes.link}>
-              Let's go
-            </Link>
+            <h1>JOOXIFY</h1>
+            <h4>Let go everything</h4>
+            <h4>and join our world</h4>
+            <h3 className={classes.link}>Copyright &copy; 2021, Data structure, KMITL</h3>
           </div>
           <div className={classes.image}>
             <Link to="/category">

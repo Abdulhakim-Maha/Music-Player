@@ -7,8 +7,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import classes from "./ShowMusic.module.css";
 import Music from "../../components/Music/Music";
-import SearchIcon from '@mui/icons-material/Search';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import SearchIcon from "@mui/icons-material/Search";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 
 const ShowMusic = ({ sort, search, category, undo }) => {
   const [age, setAge] = useState("");
@@ -16,6 +16,7 @@ const ShowMusic = ({ sort, search, category, undo }) => {
 
   const defaulHandler = () => {
     sort("Default");
+    setEnteredTitle("");
   };
   const titleChangeHandler = (event) => {
     // console.log(event.target.value)
@@ -40,13 +41,14 @@ const ShowMusic = ({ sort, search, category, undo }) => {
           <input
             type="text"
             onChange={titleChangeHandler}
+            placeholder='Type title or artist name.'
             value={enterdTitle}
           />
           <button type="submit" className={classes.submit}>
-            <SearchIcon sx={{color:'white'}}/>
+            <SearchIcon sx={{ color: "white" }} />
           </button>
           <button type="button" className={classes.btn} onClick={defaulHandler}>
-            <AccountBalanceIcon sx={{color:'white'}}/>
+            <AccountBalanceIcon sx={{ color: "white" }} />
           </button>
         </form>
         <Box sx={{ minWidth: 80, marginRight: "2rem" }}>
