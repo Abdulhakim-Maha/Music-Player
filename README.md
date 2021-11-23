@@ -45,7 +45,7 @@ pip install uvicorn
 ให้พิมพ์คำสั่ง
 
 ```
-uvicorn main:app --reload
+uvicorn main:app 
 ```
 
 ### terminal ที่อยู่โฟลเดอร์ client
