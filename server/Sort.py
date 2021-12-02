@@ -29,7 +29,7 @@ inter = [
 				'src' : '/Inter/Blank Space.mp3'
 		}]
 
-def SortByTitle(type,ls = []):
+def SortSong(type,ls = []):
 	lst = []
 	if type == 'title':
 		lst = sorted(ls, key=operator.itemgetter("title"))
@@ -43,9 +43,9 @@ if __name__ == '__main__':
 		INTER = inter
 		inp = int(input("Sort by Default(0) Title(1) Artist(2) : "))
 		if inp == 1 :
-			INTER = SortByTitle('title',inter)
+			INTER = SortSong('title',inter)
 		elif inp == 2 :
-			INTER = SortByTitle('artist', inter)
+			INTER = SortSong('artist', inter)
 		elif inp == -1:
 			terminate = True
 			break

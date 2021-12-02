@@ -3,10 +3,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from DATA import INTER,JPOP,KPOP,THAI
-from Sort import SortByTitle
+from Sort import SortSong
 from Search import search_music
 from Queue import Queue
 from pydantic import BaseModel
+
 
 #class Model
 class Music(BaseModel):
@@ -48,16 +49,16 @@ async def musicList(type:str):
     inter,kpop,thai,jpop = INTER,KPOP,THAI,JPOP
     if type == 'Title':
         s = 'title'
-        inter = SortByTitle(s,inter)
-        kpop = SortByTitle(s,kpop)
-        thai = SortByTitle(s,thai)
-        jpop = SortByTitle(s,jpop)
+        inter = SortSong(s,inter)
+        kpop = SortSong(s,kpop)
+        thai = SortSong(s,thai)
+        jpop = SortSong(s,jpop)
     elif type == 'Artist':
         s = 'artist'
-        inter = SortByTitle(s,inter)
-        kpop = SortByTitle(s,kpop)
-        thai = SortByTitle(s,thai)
-        jpop = SortByTitle(s,jpop)
+        inter = SortSong(s,inter)
+        kpop = SortSong(s,kpop)
+        thai = SortSong(s,thai)
+        jpop = SortSong(s,jpop)
     elif type == 'Default':
         pass
     return {'INTER':inter, 'KPOP':kpop, 'THAI':thai, 'JPOP':jpop} 
